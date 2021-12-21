@@ -32,7 +32,6 @@ xgboost 공부하는중..!
     : feature_importance = Age, Fare, Pclass, Sibsp, Parch, Sex_female, Embarked_C, Embarked_S, Sex_male, Embarked_Q 순으로 영향을 많이 줌
     
 
-
 ### 4. 기능
  - 최대한 argments.py 만 변경하면 코드 조절이 가능하게 만듦
  - train의 경우 모델을 저장해서 test하면 예측한 결과를 결합해서 엑셀파일로 내보내줌
