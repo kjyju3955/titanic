@@ -6,6 +6,18 @@ xgboost 공부하는중..!
 
 ---
 ### 2. Data
+ - 컬럼 설명
+   - PassengerID : 고객 번호
+   - Pclass : 티켓 등급 (1=1st, 2=2nd, 3=3rd)
+   - Name : 승객 이름
+   - Sex : 성별
+   - Age : 연령
+   - SibSp : 타이타닉호에 탑승한 형제/배우자의 수
+   - Parch : 타이타닉호에 탑승한 부모/자녀의 수
+   - Ticket : 티켓 번호
+   - Fare : 승객 요금
+   - Cabin : 객실 번호
+   - Embarked : 기항지 위치 (C:Cherbourg, Q:Queenstown, S:Southampton)
 
 ---
 ### 3. 과정
