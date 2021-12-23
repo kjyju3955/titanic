@@ -92,13 +92,14 @@ xgboost 공부하는중..!
 ### 4. 기능
 
 파일명|설명
-:---:|:---:
+:---:|:---
 main.py|모델을 train하고 test
 data_pro.py|다양한 실험을 위한 데이터 전처리
 argments.py|xgboost의 하이퍼파라미터나 사용자 임의로 조절가능한 arg모음
 clf_eval.py|RandomizedSearchCV를 통해 나온 파라미터의 순위, 모델 돌린 점수 print
 plot.py|feature_important와 roc커브를 plot
 ./data/|titanic 데이터 위치
+./data/Titanic 데이터 분석.ipynb|titanic데이터가 어떻게 생겼는지 보려고 만든 jupyter notebook
 ./model/|train해서 만들어낸 모델 저장하는 위치
 
 
