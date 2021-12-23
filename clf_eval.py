@@ -29,7 +29,7 @@ def scoring(model, x_val, y_val):
 
 
 def train_scoring(model, x_train, x_val, y_train, y_val):
-    score = cross_val_score(model, x_train, y_train, cv=5)
+    score = cross_val_score(model, x_train, y_train, scoring='accuracy', cv=5)
     print("cross_val_score: {0:.4f}".format(score.mean()))
 
     scoring(model, x_val, y_val)

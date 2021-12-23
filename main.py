@@ -5,6 +5,7 @@ import argments
 from clf_eval import *
 import joblib
 from sklearn.model_selection import train_test_split
+from yellowbrick.classifier import ROCAUC
 
 
 class XGB:
@@ -29,7 +30,8 @@ class XGB:
     def model_train(self):
         x, y = data_processing(self.mode)
 
-        x_train, x_val, y_train, y_val = train_test_split(x, y, test_size=argments.env['train_test_size'], random_state=156)
+        x_train, x_val, y_train, y_val = train_test_split(x, y, test_size=argments.env['train_test_size'],
+                                                          random_state=156)
 
         xgb = XGBClassifier(use_label_encoder=False, objective='binary:logistic')  # 타이타닉은 이진 분류 이기에 해당 objective 사용
 
@@ -44,6 +46,11 @@ class XGB:
 
         search_param(random_xgb)
         train_scoring(best_xgb, x_train, x_val, y_train, y_val)
+
+        test = ROCAUC(best_xgb, classes=[0, 1])
+        test.fit(x_train, y_train)
+        test.score(x_train, y_train)
+        test.show()
 
         self.save_model(best_xgb)
 
